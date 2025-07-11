@@ -1,0 +1,212 @@
+/* Genel ayarlar */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Başlık */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Form alanı */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #2980b9;
+}
+
+/* Filtre butonları */
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #ecf0f1;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.filters button:hover {
+  background-color: #d0d7de;
+}
+.filters button.active {
+  background-color: #d0d7de;
+  color: white;
+  font-weight: bold;
+}
+
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #fafafa;
+  padding: 12px;
+  border-left: 5px solid #e30b0b;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  border-left-color: #2ecc71;
+  text-decoration: line-through;
+}
+
+
+.task-item .info {
+  flex: 1;
+}
+
+.task-item h3 {
+  margin: 0 0 5px;
+  font-size: 1.1rem;
+}
+
+.task-item p {
+  margin: 0 0 5px;
+  color: #555;
+}
+
+.task-item span {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+
+.task-item .buttons {
+  margin-top: 10px;
+}
+
+.task-item button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #bdc3c7;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-item button:hover {
+  background-color: #7f8c8d;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters button {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+  }
+}
+
+.task-item.editing {
+  background-color: #eef6fc;
+  border-left-color: #3498db;
+}
+
+.task-item input[type="text"],
+.task-item textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.task-item textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.task-item .edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.task-item .edit-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.task-item .edit-buttons button:hover {
+  background-color: #1e8449;
+}
